@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% block content %}
+    <div class="row">
+        <div class="span6 columns">
+        </div>
+    </div>
+    <div class="page-header">
+        <h1>Register Today!</h1>
+    </div>
+    <div class="container">
+        <div class="span6 columns">
+            <form  class ="form"  id="user_form" accept-charset="UTF-8" action="{% url 'signup' %}" class="form-stacked"  method="post">
+                {% bootstrap_form_errors form %}
+
+                    {% csrf_token %}
+
+                        {%   bootstrap_form  form%}
+
+                    <input type="submit" value="Submit" />
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

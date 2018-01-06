@@ -5,13 +5,13 @@ from django.contrib.auth.models import AbstractBaseUser
 
 
 class User(AbstractBaseUser):
-    name = models.CharField(max_length=255,null=False,blank=False)
+    name= models.CharField(max_length=255,null=False,blank=False)
     surname=models.CharField(max_length=255,null=False,blank=False)
     email = models.EmailField(max_length=255, unique=True,null=False)
-    telephone=models.IntegerField(max_length=15,null=False)
-    #	password	field	defined	in	base	class
-    objects=models.GeoManager
+    telephone=models.CharField(max_length=17,null=False)
 
+    #password	field	defined	in	base	class
+    objects=models.GeoManager
 
     USERNAME_FIELD = 'email'
 
