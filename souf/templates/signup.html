@@ -6,18 +6,25 @@
         </div>
     </div>
     <div class="page-header">
-        <h1>Register Today!</h1>
+        <h1>S'inscrire</h1>
     </div>
     <div class="container">
         <div class="span6 columns">
             <form  class ="form"  id="user_form" accept-charset="UTF-8" action="{% url 'signup' %}" class="form-stacked"  method="post">
-                {% bootstrap_form_errors form %}
+                {% if form.non_field_errors %}
+                    <div class="panel">
+                        ERREUR !
+                    </div>
+                    {% for error in form.non_field_errors %}
+                        <div class="alert-danger"> {{ error }}</div>
+                    {% endfor %}
+                {% endif %}
 
-                    {% csrf_token %}
+                {% csrf_token %}
 
-                        {%   bootstrap_form  form%}
+                {%   bootstrap_form  form%}
 
-                    <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" />
 
             </form>
         </div>

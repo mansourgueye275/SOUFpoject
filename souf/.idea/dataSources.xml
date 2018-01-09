@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="soufproject@localhost" uuid="7097428a-1138-46bf-816d-a9a3fad938ff">
+    <data-source source="LOCAL" name="soufprojectdb@localhost" uuid="80a6a19e-05e4-4f87-8f36-dc613c6de48c">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5433/soufproject</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5433/soufprojectdb</jdbc-url>
       <driver-properties>
         <property name="ApplicationName" value="DataGrip" />
       </driver-properties>
